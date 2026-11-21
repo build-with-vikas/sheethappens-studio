@@ -8,7 +8,7 @@ Claude runs the page: makes the reels and images, schedules them after the owner
 - Instagram: @sheethappens.daily, vidIQ platformAccountId `39972500329060513` (vidIQ connector; publish + insights scopes, no comment replies)
 - Content calendar (main): Google Sheet `1RlKZ70o0XKT2LPqQugcIw-nuJnrzKRQwLANUYvo2S8M`, tabs `Calendar`, `Learning Log`, `Playbook`
 - Google Drive folder "Sheet Happens Studio": `1RUOozVxIbJnGhHVaKKTu7Cg7-mW9vQq2` (finished videos, reports)
-- Weekly report: email to the owner's Gmail every Sunday (use the Gmail connector, send to the account owner)
+- Weekly report: email to the owner's Gmail every Sunday night (nightly run) (use the Gmail connector, send to the account owner)
 - Timezone: India (IST, UTC+05:30)
 
 ## Approval rule (never skip)
@@ -34,7 +34,7 @@ If the owner has not approved, do not publish. Send a push notification instead.
 4. Make the next day's posts from the Calendar rows, applying the Learning Log changes.
 5. Upload (`vidiq_video_upload` with localFile + `tools/vidiq-up.sh`; `vidiq_upload_image` with PUT), create drafts with `publishAt`.
 6. Push-notify the owner: next day's posts are ready. Show each video/image and caption, wait for "approved", then publish (schedules them).
-7. Commit the new reel folders and images to this repo.
+7. Save the finished videos/images to the Google Drive folder (create_file with a sha256 file reference). Nightly sessions can read this repo but not push to it.
 
 ## Content mix (owner feedback: plain tricks are too generic)
 
