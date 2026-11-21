@@ -36,6 +36,18 @@ If the owner has not approved, do not publish. Send a push notification instead.
 6. Push-notify the owner: next day's posts are ready. Show each video/image and caption, wait for "approved", then publish (schedules them).
 7. Commit the new reel folders and images to this repo.
 
+## Content mix (owner feedback: plain tricks are too generic)
+
+People love the logic and the "I didn't know Excel could do that" moments, not just shortcuts.
+Each day from Day 2: Reel 1 = Trick, Reel 2 = Setting or Logic, Reel 3 = Build or Puzzle, Image = cheat sheet.
+The Calendar's Topic column starts with the type ("Setting:", "Logic:", "Build:", "Puzzle:").
+
+- Setting: SHOW the real Excel Options dialog / menu path being clicked, then the before/after result.
+- Logic: show the surprising result first, then explain WHY with a simple visual (e.g. dates as numbers, 0.1+0.2), then the fix.
+- Build: build a small useful thing step by step on screen (tracker, calculator, Gantt), end on the finished result.
+- Puzzle: show the question, "Comment your answer 👇" with a 3-second pause, then the reveal and why. Caption asks for answers.
+- Trick: the existing wrong-way / do-this-instead format.
+
 ## Making a reel
 
 - Copy `templates/reel` to `reels/dayNN-rK-topic`, keep the `engine` symlink.
