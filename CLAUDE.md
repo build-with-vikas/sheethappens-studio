@@ -42,7 +42,7 @@ If the owner has not approved, do not publish. Send a push notification instead.
 - Structure (28 s at 120 BPM): 0-4 s the WRONG way with a red stamp ("You're doing this" / "Still using X?"), 4-8 s "Do this instead", the trick, a second use, a bonus, recap, end card (Save + Follow).
 - Headlines max ~4 words while the voice talks. Voice: Kokoro `am_michael` (US male), speed 1.22, English. Word-by-word subtitles.
 - Look: real Excel window, Carlito cell font, Inter headlines, off-white #F4F3EF, Excel green #107C41. No glow, no neon.
-- Build: `/home/user/.venv-kokoro/bin/python make_vo.py && node song.js && cp out/music.wav out/music-only.wav && bash mixvo.sh && node engine/render.js video && node engine/render.js mux && node engine/render.js verify`
+- Build: `~/.venv-kokoro/bin/python make_vo.py && node song.js && cp out/music.wav out/music-only.wav && bash mixvo.sh && node engine/render.js video && node engine/render.js mux && node engine/render.js verify`
 - Review stills/contact sheet before rendering; `verify` must pass.
 
 ## Images
