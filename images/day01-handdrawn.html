@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Marker;src:url(file:///home/user/sheethappens-studio/reels/day01-r2-xlookup/engine/fonts/PermanentMarker-Regular.ttf)}
+@font-face{font-family:Hand;src:url(file:///home/user/sheethappens-studio/reels/day01-r2-xlookup/engine/fonts/PatrickHand-Regular.ttf)}
+@font-face{font-family:Gochi;src:url(file:///home/user/sheethappens-studio/reels/day01-r2-xlookup/engine/fonts/GochiHand-Regular.ttf)}
+body{margin:0}
+.p{width:1080px;height:1350px;box-sizing:border-box;padding:46px 44px 40px;position:relative;font-family:Hand;color:#1c1c1c;
+ background:#fdfcf7 repeating-linear-gradient(0deg,transparent 0 41px,#e9eef4 41px 42px)}
+h1{font-family:Marker;font-weight:400;font-size:50px;margin:0;text-align:center;white-space:nowrap;letter-spacing:1px;position:relative}
+h1 span{background:linear-gradient(transparent 18%,#fff176 18% 88%,transparent 88%);padding:0 18px;border-radius:12px 4px 14px 6px}
+.sub{text-align:center;font-size:31px;margin:8px 0 18px;color:#333}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 34px}
+.sec h2{font-family:Marker;font-weight:400;font-size:31px;margin:0 0 6px;display:inline-block;padding:2px 16px;border-radius:10px 3px 12px 4px;transform:rotate(-1deg)}
+.r{display:flex;align-items:center;gap:6px;font-size:30px;line-height:1;margin:9px 0}
+.k{display:inline-block;border:2.4px solid #222;border-radius:7px 9px 6px 8px;padding:3px 8px 2px;font-size:24px;background:#fff;box-shadow:1.5px 2px 0 #222}
+.pl{font-size:22px;margin:0 1px}
+.ar{margin:0 8px;font-size:24px}
+.y{background:#fff176}.pk{background:#f8a5d1}.g{background:#a5e8a0}.b{background:#9fd3f7}.o{background:#ffc58a}.v{background:#d6b8ff}
+.foot{position:absolute;left:44px;right:44px;bottom:38px;display:flex;justify-content:space-between;align-items:flex-end}
+.bub{font-family:Gochi;font-size:34px;border:3px solid #222;border-radius:46% 54% 50% 48%/55% 45% 55% 45%;padding:14px 30px;transform:rotate(-4deg);background:#fff}
+.tag{font-family:Marker;font-size:34px;color:#107C41;transform:rotate(-2deg)}
+.note{font-family:Gochi;font-size:26px;color:#c0392b;margin-left:6px}
+</style></head><body><div class="p">
+<h1><span>Excel Shortcuts You'll Use Daily</span></h1>
+<div class="sub">Work faster &rarr; Save hours &rarr; Look like the Excel pro</div>
+<div class="grid" id="g"></div>
+<div class="foot"><div class="bub">Save this! Future you<br>says thank you &#9786;</div><div class="tag">@sheethappens.daily</div></div>
+</div>
+<script>
+const S=[
+ ['1. Basics','y',[['Ctrl+C','Copy'],['Ctrl+V','Paste'],['Ctrl+Z','Undo'],['Ctrl+Y','Redo'],['Ctrl+F','Find'],['Ctrl+H','Find & Replace']]],
+ ['2. Smart Tricks','pk',[['Ctrl+E','Flash Fill','← magic!'],['Alt+=','AutoSum'],['Ctrl+T','Make a Table'],['Ctrl+Shift+L','Filter on/off'],['Alt+F1','Instant Chart'],['F4','Lock cell $A$1']]],
+ ['3. Navigation','g',[['Ctrl+↓','Last row'],['Ctrl+Home','Go to A1'],['Ctrl+PgDn','Next sheet'],['Ctrl+G','Go To'],['Ctrl+Space','Select column'],['Shift+Space','Select row']]],
+ ['4. Formatting','b',[['Ctrl+1','Format Cells'],['Ctrl+B','Bold'],['Ctrl+Shift+%','Percent'],['Ctrl+Shift+$','Currency'],['Alt+Enter','New line in cell'],['Ctrl+`','Show formulas']]],
+ ['5. Rows and Columns','o',[['Ctrl+Shift++','Insert'],['Ctrl+-','Delete'],['Ctrl+D','Fill down'],['Ctrl+R','Fill right'],['Ctrl+9','Hide row']]],
+ ['6. Dates and Data','v',[['Ctrl+;',"Today's date"],['Ctrl+Shift+;','Current time'],['Ctrl+A','Select all'],['F2','Edit cell'],['Ctrl+Shift+↓','Select to end']]],
+];
+const keys=k=>{const parts=k.endsWith('++')?[...k.slice(0,-2).split('+'),'+']:k.split('+');return parts.map(x=>'<span class="k">'+x+'</span>').join('<span class="pl">+</span>')};
+document.getElementById('g').innerHTML=S.map(([h,c,rows])=>'<div class="sec"><h2 class="'+c+'">'+h+'</h2>'+rows.map(([k,d,n])=>'<div class="r">'+keys(k)+'<span class="ar">→</span>'+d+(n?'<span class="note">'+n+'</span>':'')+'</div>').join('')+'</div>').join('');
+</script></body></html>

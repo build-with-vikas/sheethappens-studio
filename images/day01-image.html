@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0}
+.card{width:1080px;height:1350px;background:#F4F3EF;font-family:Inter,sans-serif;box-sizing:border-box;padding:90px 80px;color:#111;position:relative}
+.tag{font-weight:700;font-size:26px;letter-spacing:4px;color:#107C41}
+h1{font-weight:800;font-size:76px;line-height:1.02;letter-spacing:-3px;margin:22px 0 46px}
+h1 span{color:#107C41}
+.row{display:flex;align-items:center;gap:28px;padding:13px 0;border-top:2px solid #E2E0D8}
+.row:last-child{border-bottom:2px solid #E2E0D8}
+.n{width:44px;font:600 26px 'JetBrains Mono';color:#8A8A80}
+.keys{width:330px;display:flex;gap:10px;align-items:center}
+.k{background:#fff;border:2px solid #D0D0CB;border-bottom-width:6px;border-radius:12px;padding:6px 16px;font-weight:700;font-size:28px}
+.p{font-size:26px;color:#777}
+.d{font-size:32px;font-weight:600}
+.foot{position:absolute;left:80px;right:80px;bottom:70px;display:flex;justify-content:space-between;font-size:28px;font-weight:700}
+.foot b{color:#107C41}
+</style></head><body><div class="card">
+<div class="tag">EXCEL TIP</div>
+<h1>10 shortcuts that save you <span>1 hour a day</span></h1>
+<div id="rows"></div>
+<div class="foot"><span>Save this for later</span><b>@sheethappens.daily</b></div>
+</div>
+<script>
+const S=[["Ctrl+E","Flash Fill: split or join text"],["Alt+=","AutoSum a column"],["Ctrl+Shift+L","Turn filters on/off"],["Ctrl+T","Make a smart table"],["Ctrl+;","Insert today's date"],["Ctrl+↓","Jump to the last row"],["Ctrl+D","Fill down from above"],["F4","Lock a cell ($A$1)"],["Alt+Enter","New line inside a cell"],["Ctrl+1","Open Format Cells"]];
+document.getElementById('rows').innerHTML=S.map(([k,d],i)=>`<div class="row"><div class="n">${String(i+1).padStart(2,'0')}</div><div class="keys">${k.split('+').map(x=>`<span class="k">${x}</span>`).join('<span class="p">+</span>')}</div><div class="d">${d}</div></div>`).join('');
+</script></body></html>
