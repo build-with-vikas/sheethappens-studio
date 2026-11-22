@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0}
+.c{width:1080px;height:1920px;background:#F4F3EF;position:relative;font-family:Inter,sans-serif;overflow:hidden}
+.card{position:absolute;left:90px;top:500px;width:900px;height:940px;background:#fff;border-radius:36px;box-shadow:0 14px 40px rgba(0,0,0,.12);overflow:hidden}
+.bar{height:74px;background:#107C41;display:flex;align-items:center;justify-content:space-between;padding:0 36px}
+.dots span{display:inline-block;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.6);margin-right:12px}
+.tag{color:#fff;font-weight:700;font-size:26px;letter-spacing:3px}
+.pre,.post{text-align:center;color:#0B5A2F;font-weight:700;font-size:38px;letter-spacing:6px;text-transform:uppercase}
+.pre{margin-top:72px}.post{margin-top:34px}
+.main{text-align:center;font-weight:900;font-size:108px;letter-spacing:-4px;line-height:122px;margin-top:40px;color:#111}
+.main .hl{background:linear-gradient(transparent 62%,#B9E4C9 62%,#B9E4C9 90%,transparent 90%);padding:0 10px}
+.prev{display:flex;justify-content:center;margin-top:50px}
+.handle{position:absolute;left:0;right:0;top:1510px;text-align:center;color:#107C41;font-weight:700;font-size:34px}
+.pill{font:700 64px "JetBrains Mono",monospace;color:#0B5A2F;border:3px solid #D0D0CB;border-radius:28px;padding:26px 44px}
+.k{display:inline-block;font-weight:700;font-size:58px;background:#fff;border:3px solid #D0D0CB;border-bottom-width:12px;border-radius:22px;padding:18px 34px;margin:0 12px;color:#111}
+.plus{font-size:60px;color:#666;align-self:center}
+</style></head><body><div class="c">
+<div class="card"><div class="bar"><div class="dots"><span></span><span></span><span></span></div><div class="tag" id="tag"></div></div>
+<div class="pre" id="pre"></div><div class="main" id="main"></div><div class="post" id="post"></div><div class="prev" id="prev"></div></div>
+<div class="handle">@sheethappens.daily</div></div>
+<script>
+const q=new URLSearchParams(location.search);
+document.getElementById('tag').textContent=q.get('tag')||'EXCEL TIP';
+document.getElementById('pre').textContent=q.get('pre')||'';
+const lines=(q.get('main')||'').split('|');
+document.getElementById('main').innerHTML=lines.map((l,i)=>i===lines.length-1?`<span class="hl">${l}</span>`:l).join('<br>');
+document.getElementById('post').textContent=q.get('post')||'In Excel';
+const p=q.get('prev')||'';
+document.getElementById('prev').innerHTML=p.startsWith('keys:')?p.slice(5).split('+').map(k=>`<span class="k">${k}</span>`).join('<span class="plus">+</span>'):`<span class="pill">${p}</span>`;
+</script></body></html>
