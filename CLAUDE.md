@@ -71,6 +71,14 @@ Images (11:00) stay as hand-drawn cheat sheets.
 
 Hand-drawn marker style (see `images/day01-handdrawn.html`): notebook paper, Permanent Marker title, Patrick Hand body, highlighter section labels, drawn keycaps. 1080x1350, upload as JPEG. Original content only.
 
+
+## Improve every day (owner's standing instruction)
+
+Every night, besides the data-driven changes, make at least ONE visible quality upgrade and log it in the Learning Log
+(Area = "Quality"): e.g. clearer zoom on the clicked button, nicer chart drawing, better cover title, smoother cursor,
+cleaner subtitles, a more useful real-life example, a better caption, a tighter voice script. Never repeat a mistake
+already logged. Next night, check the numbers to see if it helped, and fill "Result after change".
+
 ## Rules
 
 - Keep facts correct; check every shortcut and formula.
