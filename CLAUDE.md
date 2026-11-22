@@ -42,18 +42,24 @@ Every reel is a BUILD: "How To Create ___ In Excel" (charts, trackers, interacti
 Topics are in the Calendar (Topic starts with "Build:", the Title column is the cover text).
 Repeat winners: when a build gets the most saves/follows in a week, schedule a remake ("(remake)" rows) with a new twist.
 
-Reel structure (about 30 s):
-- 0.0-0.6 s: COVER frame (this is the grid thumbnail): our brand card with "How To Create" / big underlined title / "In Excel" and the SH logo. Same layout every time.
-- 0.6-3 s: show the FINISHED result working (e.g. ring fills to 75% as a tick box is clicked). This is the hook.
-- 3-24 s: build it step by step in the Excel window. Each step has a short label: "Step 1: Add the data", "Step 2: Insert doughnut chart"... Show real menus (Insert > Chart), real formulas, real result.
-- 24-27 s: final demo: change a value and the build reacts.
-- 27-30 s: end card: Save this + Follow for a new Excel build every day.
-Voice: short step narration. Subtitles on.
+Reel structure: a PROPER TUTORIAL, 45-75 s (owner feedback 22 Nov: "don't hurry, teach properly, show where things are").
+- 0.0-0.6 s: COVER frame (grid thumbnail): "How To Create" / big title / "In Excel" + mini preview. Same layout every time.
+- Hook (3-5 s): the finished result working.
+- Numbered steps. For EVERY step show WHERE to click: a visible mouse cursor moves to the real tab/button/menu,
+  a red ring circles the button, and a black chip at the top spells the path ("Insert › Checkbox", "Right-click › Format Data Series").
+  Mention the alternative for older Excel when a feature is new (e.g. Developer › Insert › Check Box).
+  Explain what each formula means in plain words (e.g. ticked = TRUE, COUNTIF counts the TRUEs).
+  Show dialogs/panels/dropdowns as they really look (gallery, context menu, Format pane with slider).
+- Test it: change the data and the build reacts. Then end card: Save + Follow.
+- Voice: Kokoro am_michael, speed 1.05 (not faster), calm, one idea per sentence. Lines play back to back with short gaps;
+  make_vo.py writes vo.js with real start times and score.js anchors every visual to its sentence (see templates/tutorial).
+Reference: reels/day02-r1-doughnut-tutorial (copy templates/tutorial for new reels).
+
 Images (11:00) stay as hand-drawn cheat sheets.
 
 ## Making a reel
 
-- Copy `templates/build` (the build format: cover, result hook, numbered steps with menu-path chips, demo, end card) to `reels/dayNN-rK-topic`, keep the `engine` symlink. Change TITLE, the data, the steps and the result drawing. `templates/reel` is the old trick format.
+- Copy `templates/tutorial` to `reels/dayNN-rK-topic` (keep the `engine` symlink). Write the voice script first (make_vo.py), then anchor visuals in score.js, then draw in film.js (cursor path CUR, ribbon buttons, chips, panels). Regenerate mixvo.sh from vo.js (see the node one-liner in the reference reel's history).
 - Skip any Calendar row whose Status is already Made, Scheduled or Posted.
 - Structure: see Content model above. Reference build reel: reels/day02-r1-doughnut (cover, result-first hook, steps, demo, end card).
 - Headlines max ~4 words while the voice talks. Voice: Kokoro `am_michael` (US male), speed 1.22, English. Word-by-word subtitles.
