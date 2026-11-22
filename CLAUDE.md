@@ -72,6 +72,15 @@ Images (11:00) stay as hand-drawn cheat sheets.
 Hand-drawn marker style (see `images/day01-handdrawn.html`): notebook paper, Permanent Marker title, Patrick Hand body, highlighter section labels, drawn keycaps. 1080x1350, upload as JPEG. Original content only.
 
 
+
+## Installed skills (in .claude/skills, all MIT)
+
+- Instagram (Jakeschincariol/instagram-agent-skill): use `ig-reel` to score hooks/scripts before rendering, `ig-caption` for every caption,
+  `ig-human` on every caption/script before showing the owner, `ig-audit` in the nightly analysis, `ig-plan` for weekly planning,
+  `ig-reply` for drafting comment replies, `ig-profile` for monthly profile reviews, `ig-carousel` for image posts.
+- Marketing (coreyhaines31/marketingskills): `social`, `content-strategy`, `copywriting`, `marketing-psychology`, `lead-magnets`, `offers`.
+- Video: Remotion official skills + remocn (`remocn`, `remocn-add`, `remocn-video`) for polished transitions/animations when useful.
+
 ## Improve every day (owner's standing instruction)
 
 Every night, besides the data-driven changes, make at least ONE visible quality upgrade and log it in the Learning Log
