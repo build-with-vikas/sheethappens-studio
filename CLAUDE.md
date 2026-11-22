@@ -78,6 +78,7 @@ Hand-drawn marker style (see `images/day01-handdrawn.html`): notebook paper, Per
 
 - Cover frame only 0.3 s. From 0.3 s the FINISHED result is already moving (ring filling, chart growing) with a big
   on-screen question ("Want this tracker? 60 seconds."). No static frames in the first 3 seconds.
+- Before uploading ANY video, extract frame 1 (`ffmpeg -i x.mp4 -frames:v 1 f0.png`) and look at it: it must be the branded cover. Instagram uses frame 1 as the thumbnail and it cannot be changed after posting. (22 Nov: two reels went out with blank thumbnails.)
 - Score every opening line with `ig-reel` (hookscore) before rendering; rewrite anything weak.
 - Every night log skip rate, avg watch % and profile visits per reel (vidiq_instagram_owner_insights mode "reels" is free).
 - Trial Reels: after the owner approves, publish ONE of the next day's reels right away as a Trial Reel
