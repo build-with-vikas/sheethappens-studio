@@ -73,6 +73,18 @@ Hand-drawn marker style (see `images/day01-handdrawn.html`): notebook paper, Per
 
 
 
+
+## Retention fixes (22 Nov data: 81-90% skip rate, ~4.5 s average watch)
+
+- Cover frame only 0.3 s. From 0.3 s the FINISHED result is already moving (ring filling, chart growing) with a big
+  on-screen question ("Want this tracker? 60 seconds."). No static frames in the first 3 seconds.
+- Score every opening line with `ig-reel` (hookscore) before rendering; rewrite anything weak.
+- Every night log skip rate, avg watch % and profile visits per reel (vidiq_instagram_owner_insights mode "reels" is free).
+- Trial Reels: after the owner approves, publish ONE of the next day's reels right away as a Trial Reel
+  (vidiq_instagram_publish_reel with trialParams {graduationStrategy: "SS_PERFORMANCE"}) instead of scheduling it;
+  schedule the other posts as usual. Note it in the Calendar Notes.
+- vidIQ credits are nearly empty (refill 1 Dec): only use 0-credit tools (posting, scheduling, owner insights).
+
 ## Installed skills (in .claude/skills, all MIT)
 
 If these skills are not loaded in your session (the repo was cloned by hand), read `.claude/skills/<name>/SKILL.md` directly and follow it.
