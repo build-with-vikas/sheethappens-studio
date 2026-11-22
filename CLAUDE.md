@@ -75,6 +75,8 @@ Hand-drawn marker style (see `images/day01-handdrawn.html`): notebook paper, Per
 
 ## Installed skills (in .claude/skills, all MIT)
 
+If these skills are not loaded in your session (the repo was cloned by hand), read `.claude/skills/<name>/SKILL.md` directly and follow it.
+
 - Instagram (Jakeschincariol/instagram-agent-skill): use `ig-reel` to score hooks/scripts before rendering, `ig-caption` for every caption,
   `ig-human` on every caption/script before showing the owner, `ig-audit` in the nightly analysis, `ig-plan` for weekly planning,
   `ig-reply` for drafting comment replies, `ig-profile` for monthly profile reviews, `ig-carousel` for image posts.
