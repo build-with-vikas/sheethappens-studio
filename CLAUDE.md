@@ -36,22 +36,26 @@ If the owner has not approved, do not publish. Send a push notification instead.
 6. Push-notify the owner: next day's posts are ready. Show each video/image and caption, wait for "approved", then publish (schedules them).
 7. Save the finished videos/images to the Google Drive folder (create_file with a sha256 file reference). Nightly sessions can read this repo but not push to it.
 
-## Content mix (owner feedback: plain tricks are too generic)
+## Content model (from 22 Nov, based on the top Excel page the owner shared)
 
-People love the logic and the "I didn't know Excel could do that" moments, not just shortcuts.
-Each day from Day 2: Reel 1 = Trick, Reel 2 = Setting or Logic, Reel 3 = Build or Puzzle, Image = cheat sheet.
-The Calendar's Topic column starts with the type ("Setting:", "Logic:", "Build:", "Puzzle:").
+Every reel is a BUILD: "How To Create ___ In Excel" (charts, trackers, interactive tools, data fixes).
+Topics are in the Calendar (Topic starts with "Build:", the Title column is the cover text).
+Repeat winners: when a build gets the most saves/follows in a week, schedule a remake ("(remake)" rows) with a new twist.
 
-- Setting: SHOW the real Excel Options dialog / menu path being clicked, then the before/after result.
-- Logic: show the surprising result first, then explain WHY with a simple visual (e.g. dates as numbers, 0.1+0.2), then the fix.
-- Build: build a small useful thing step by step on screen (tracker, calculator, Gantt), end on the finished result.
-- Puzzle: show the question, "Comment your answer 👇" with a 3-second pause, then the reveal and why. Caption asks for answers.
-- Trick: the existing wrong-way / do-this-instead format.
+Reel structure (about 30 s):
+- 0.0-0.6 s: COVER frame (this is the grid thumbnail): our brand card with "How To Create" / big underlined title / "In Excel" and the SH logo. Same layout every time.
+- 0.6-3 s: show the FINISHED result working (e.g. ring fills to 75% as a tick box is clicked). This is the hook.
+- 3-24 s: build it step by step in the Excel window. Each step has a short label: "Step 1: Add the data", "Step 2: Insert doughnut chart"... Show real menus (Insert > Chart), real formulas, real result.
+- 24-27 s: final demo: change a value and the build reacts.
+- 27-30 s: end card: Save this + Follow for a new Excel build every day.
+Voice: short step narration. Subtitles on.
+Images (11:00) stay as hand-drawn cheat sheets.
 
 ## Making a reel
 
-- Copy `templates/reel` to `reels/dayNN-rK-topic`, keep the `engine` symlink.
-- Structure (28 s at 120 BPM): 0-4 s the WRONG way with a red stamp ("You're doing this" / "Still using X?"), 4-8 s "Do this instead", the trick, a second use, a bonus, recap, end card (Save + Follow).
+- Copy `templates/build` (the build format: cover, result hook, numbered steps with menu-path chips, demo, end card) to `reels/dayNN-rK-topic`, keep the `engine` symlink. Change TITLE, the data, the steps and the result drawing. `templates/reel` is the old trick format.
+- Skip any Calendar row whose Status is already Made, Scheduled or Posted.
+- Structure: see Content model above. Reference build reel: reels/day02-r1-doughnut (cover, result-first hook, steps, demo, end card).
 - Headlines max ~4 words while the voice talks. Voice: Kokoro `am_michael` (US male), speed 1.22, English. Word-by-word subtitles.
 - Look: real Excel window, Carlito cell font, Inter headlines, off-white #F4F3EF, Excel green #107C41. No glow, no neon.
 - Build: `~/.venv-kokoro/bin/python make_vo.py && node song.js && cp out/music.wav out/music-only.wav && bash mixvo.sh && node engine/render.js video && node engine/render.js mux && node engine/render.js verify`
