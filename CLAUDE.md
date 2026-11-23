@@ -86,6 +86,17 @@ Hand-drawn marker style (see `images/day01-handdrawn.html`): notebook paper, Per
   schedule the other posts as usual. Note it in the Calendar Notes.
 - vidIQ credits are nearly empty (refill 1 Dec): only use 0-credit tools (posting, scheduling, owner insights).
 
+
+## Captions are SEO (owner request 23 Nov; Instagram search reads name, bio, captions, on-screen text, hashtags; first sentence weighs most; public reels can show on Google)
+
+Format, every reel:
+1. First line = the exact phrase people search + the result: "How to make a progress tracker in Excel with checkboxes ✅ Tick a task and the bar fills by itself."
+2. Numbered steps with real menu paths and formulas (and the older-Excel alternative).
+3. One line with 2-3 related search phrases written naturally ("Excel to-do list, project task tracker or study planner").
+4. CTA: "💾 Save this · Follow @sheethappens.daily for an Excel tutorial every day"
+5. 3-5 specific hashtags (#exceltutorial + topic tag like #progresstracker + #excelforbeginners/#exceltips/#msexcel). No hashtag walls.
+Never stuff keywords; it must read like a person wrote it (run ig-human). Say the build name in the first spoken line and on screen too.
+
 ## Installed skills (in .claude/skills, all MIT)
 
 If these skills are not loaded in your session (the repo was cloned by hand), read `.claude/skills/<name>/SKILL.md` directly and follow it.
